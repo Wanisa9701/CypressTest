@@ -18,7 +18,6 @@ describe('CypressTest', () => {
         var afterSort = []
         cy.contains('Sortable Data Tables').click()
         cy.get('#table1 > tbody > tr').should('have.length',4)
-        // cy.log('**sort by Last Name**')
         cy.contains('.header', 'Last Name').click()
         cy.wait(1000)
         cy.get('#table1 > tbody > tr').should('have.length',4)
